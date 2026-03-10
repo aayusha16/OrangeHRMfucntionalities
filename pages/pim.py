@@ -7,8 +7,9 @@ class PIMPage:
         self.first_name_input = page.locator("input[name='firstName']")
         self.last_name_input = page.locator("input[name='lastName']")
         self.save_button = page.locator("button:has-text('Save')")
+        self.personal_details_header = page.locator("h6:has-text('Personal Details')")
 
-    # Click PIM menu
+    # Open PIM module
     def open_pim_page(self):
         self.pim_menu.click()
 
@@ -16,7 +17,7 @@ class PIMPage:
     def click_add_employee(self):
         self.add_employee_button.click()
 
-    # Fill employee details
+    # Add employee details
     def add_employee(self, first_name, last_name):
         self.first_name_input.fill(first_name)
         self.last_name_input.fill(last_name)
@@ -24,4 +25,4 @@ class PIMPage:
 
     # Verify employee added
     def verify_employee_added(self):
-        return "addEmployee" in self.page.url
+        return self.personal_details_header.is_visible()

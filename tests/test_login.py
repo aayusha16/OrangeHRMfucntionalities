@@ -1,33 +1,43 @@
 from pages.login import Login
+
+
 def test_valid_login(page):
     login = Login(page)
-    login.Login("Admin", "admin123")
+    login.login("Admin", "admin123")
     assert "dashboard" in page.url
-    
-def test_invalid_login(page):
+
+
+def test_invalid_password(page):
     login = Login(page)
-    login.Login("Admin", "admin1234")
-    assert "dashboard"  in page.url
-    
-def test_invalid_login1(page):
+    login.login("Admin", "admin1234")
+    assert "dashboard" not in page.url
+
+
+def test_invalid_username(page):
     login = Login(page)
-    login.Login("Admin1", "ADMIN123")
-    assert "dashboard"  in page.url
-    
-def test_invalid_login2(page):
+    login.login("Admin1", "admin123")
+    assert "dashboard" not in page.url
+
+
+def test_invalid_credentials(page):
     login = Login(page)
-    login.Login("ADMIN", "ADMIN123")
-    assert "dashboard"  in page.url
-def test_invalid_login3(page):
+    login.login("ADMIN", "ADMIN123")
+    assert "dashboard" not in page.url
+
+
+def test_blank_login(page):
     login = Login(page)
-    login.Login("", "")
-    assert "dashboard"  in page.url
-    
-def test_invalid_login4(page):
+    login.login("", "")
+    assert "dashboard" not in page.url
+
+
+def test_blank_password(page):
     login = Login(page)
-    login.Login("Admin", "")
-    assert "dashboard"  in page.url
-def test_invalid_login5(page):
+    login.login("Admin", "")
+    assert "dashboard" not in page.url
+
+
+def test_blank_username(page):
     login = Login(page)
-    login.Login("", "admin123")
-    assert "dashboard"  in page.url # dont use assertion in the pages folder.
+    login.login("", "admin123")
+    assert "dashboard" not in page.url

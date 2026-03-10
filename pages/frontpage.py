@@ -1,4 +1,4 @@
-from utils.config import TIMEOUT
+from config import TIMEOUT
 
 class FrontPage:
 
@@ -10,13 +10,17 @@ class FrontPage:
         self.forgot_password_link = page.locator("text=Forgot your password?")
 
     def verify_usernameField(self):
-        return self.username_field.is_visible(timeout=TIMEOUT)
+        self.username_field.wait_for(timeout=TIMEOUT)
+        return self.username_field.is_visible()
 
     def verify_passwordField(self):
-        return self.password_field.is_visible(timeout=TIMEOUT)
+        self.password_field.wait_for(timeout=TIMEOUT)
+        return self.password_field.is_visible()
 
     def verify_loginButton(self):
-        return self.login_button.is_visible(timeout=TIMEOUT)
+        self.login_button.wait_for(timeout=TIMEOUT)
+        return self.login_button.is_visible()
 
     def verify_forgotPasswordLink(self):
-        return self.forgot_password_link.is_visible(timeout=TIMEOUT)
+        self.forgot_password_link.wait_for(timeout=TIMEOUT)
+        return self.forgot_password_link.is_visible()
