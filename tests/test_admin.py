@@ -7,7 +7,7 @@ def test_search_existing_user(page):
  
     login = Login(page)
     login.login("Admin", "admin123")
-
+    logger.info("Logged in successfully")
     admin = AdminPage(page)
     admin.open_admin_page()
 

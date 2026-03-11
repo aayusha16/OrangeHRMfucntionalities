@@ -7,7 +7,7 @@ def test_add_employee(page):
    
     login = Login(page)
     login.login("Admin", "admin123")
-
+    logger.info("Logged in successfully")
     pim = PIMPage(page)
     pim.open_pim_page()
   
