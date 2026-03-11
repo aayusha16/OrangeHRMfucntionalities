@@ -1,2 +1,3 @@
 pytest
-playwright
+playwright  # this files help other user to install the required packages.
+pytest -playwright 
