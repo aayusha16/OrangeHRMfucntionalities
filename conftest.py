@@ -22,3 +22,10 @@ def page():
        
         context.close()
         browser.close()
+import logging
+logging.basicConfig(
+    filename='test.log',
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s"
+)
+logger =logging.getLogger(__name__)
