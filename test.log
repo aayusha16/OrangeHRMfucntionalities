@@ -18,3 +18,44 @@
 2026-03-11 08:32:28,272 - INFO - Opening OrangeHRM login page
 2026-03-11 08:32:38,756 - INFO - Opening OrangeHRM login page
 2026-03-11 08:32:43,082 - INFO - Opening OrangeHRM login page
+2026-03-11 08:36:02,769 - INFO - Opening OrangeHRM login page
+2026-03-12 21:16:18,869 - INFO - Opening OrangeHRM login page
+2026-03-12 21:16:36,569 - INFO - Screenshot taken: screenshots/test_search_existing_user.png
+2026-03-12 21:16:36,570 - INFO - Closing browser
+2026-03-12 21:16:40,156 - INFO - Opening OrangeHRM login page
+2026-03-12 21:16:53,151 - INFO - Screenshot taken: screenshots/test_search_user_with_employee_name.png
+2026-03-12 21:16:53,152 - INFO - Closing browser
+2026-03-12 21:16:55,235 - INFO - Opening OrangeHRM login page
+2026-03-12 21:17:40,010 - INFO - Screenshot taken: screenshots/test_search_user_with_status_and_role.png
+2026-03-12 21:17:40,011 - INFO - Closing browser
+2026-03-12 21:17:41,935 - INFO - Opening OrangeHRM login page
+2026-03-12 21:18:23,831 - INFO - Screenshot taken: screenshots/test_search_user_invalid.png
+2026-03-12 21:18:23,831 - INFO - Closing browser
+2026-03-12 21:18:27,516 - INFO - Opening OrangeHRM login page
+2026-03-12 21:18:36,175 - INFO - Closing browser
+2026-03-12 21:18:41,635 - INFO - Opening OrangeHRM login page
+2026-03-12 21:18:48,051 - INFO - Closing browser
+2026-03-12 21:18:49,327 - INFO - Opening OrangeHRM login page
+2026-03-12 21:18:55,276 - INFO - Closing browser
+2026-03-12 21:18:56,538 - INFO - Opening OrangeHRM login page
+2026-03-12 21:19:02,716 - INFO - Closing browser
+2026-03-12 21:19:03,886 - INFO - Opening OrangeHRM login page
+2026-03-12 21:19:19,234 - INFO - Screenshot taken: screenshots/test_valid_login.png
+2026-03-12 21:19:19,235 - INFO - Closing browser
+2026-03-12 21:19:20,513 - INFO - Opening OrangeHRM login page
+2026-03-12 21:19:28,848 - INFO - Screenshot taken: screenshots/test_invalid_password.png
+2026-03-12 21:19:28,849 - INFO - Closing browser
+2026-03-12 21:19:30,389 - INFO - Opening OrangeHRM login page
+2026-03-12 21:19:38,419 - INFO - Screenshot taken: screenshots/test_invalid_username.png
+2026-03-12 21:19:38,420 - INFO - Closing browser
+2026-03-12 21:19:39,680 - INFO - Opening OrangeHRM login page
+2026-03-12 21:19:48,254 - INFO - Closing browser
+2026-03-12 21:19:49,494 - INFO - Opening OrangeHRM login page
+2026-03-12 21:19:56,231 - INFO - Closing browser
+2026-03-12 21:19:57,526 - INFO - Opening OrangeHRM login page
+2026-03-12 21:20:03,298 - INFO - Closing browser
+2026-03-12 21:20:04,444 - INFO - Opening OrangeHRM login page
+2026-03-12 21:20:10,601 - INFO - Closing browser
+2026-03-12 21:20:12,191 - INFO - Opening OrangeHRM login page
+2026-03-12 21:20:21,159 - INFO - Screenshot taken: screenshots/test_add_employee.png
+2026-03-12 21:20:21,160 - INFO - Closing browser
