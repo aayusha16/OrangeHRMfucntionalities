@@ -5,7 +5,7 @@ def test_valid_login(page):
     login = Login(page)
     
     login.login("Admin", "admin123")
-    assert "dashboard" in page.url
+    assert "dashboard" in page.url #un and pw  as a parameter to test pass and fail
 
 
 def test_invalid_password(page):

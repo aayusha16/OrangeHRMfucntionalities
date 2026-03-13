@@ -59,3 +59,18 @@
 2026-03-12 21:20:12,191 - INFO - Opening OrangeHRM login page
 2026-03-12 21:20:21,159 - INFO - Screenshot taken: screenshots/test_add_employee.png
 2026-03-12 21:20:21,160 - INFO - Closing browser
+2026-03-13 08:25:30,727 - INFO - Opening OrangeHRM login page
+2026-03-13 08:25:45,115 - INFO - Screenshot taken: screenshots/test_search_existing_user.png
+2026-03-13 08:25:45,117 - INFO - Closing browser
+2026-03-13 08:26:16,609 - INFO - Opening OrangeHRM login page
+2026-03-13 08:26:26,220 - INFO - Screenshot taken: screenshots/test_search_existing_user.png
+2026-03-13 08:26:26,221 - INFO - Closing browser
+2026-03-13 08:26:29,429 - INFO - Opening OrangeHRM login page
+2026-03-13 08:26:43,623 - INFO - Screenshot taken: screenshots/test_search_user_with_employee_name.png
+2026-03-13 08:26:43,625 - INFO - Closing browser
+2026-03-13 08:29:36,352 - INFO - Opening OrangeHRM login page
+2026-03-13 08:30:17,654 - INFO - Screenshot taken: screenshots/test_search_existing_user.png
+2026-03-13 08:30:17,686 - INFO - Closing browser
+2026-03-13 08:30:26,441 - INFO - Opening OrangeHRM login page
+2026-03-13 08:30:34,033 - INFO - Opening OrangeHRM login page
+2026-03-13 08:30:42,141 - INFO - Opening OrangeHRM login page

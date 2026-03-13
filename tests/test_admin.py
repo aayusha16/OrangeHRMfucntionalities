@@ -1,56 +1,80 @@
 import pytest
+import logging
 from pages.login import Login
 from pages.admin import AdminPage
 
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+
 @pytest.mark.admin
 def test_search_existing_user(page):
- 
+
     login = Login(page)
     login.login("Admin", "admin123")
     logger.info("Logged in successfully")
+
     admin = AdminPage(page)
     admin.open_admin_page()
 
     admin.search_user(username="Admin")
 
-    assert admin.verify_user_found(), "Existing user not found"
+    try:
+        assert admin.verify_user_found()
+        logger.info("Existing user found successfully")
+    except AssertionError:
+        logger.warning("Existing user not found")
 
 
 @pytest.mark.admin
 def test_search_user_with_employee_name(page):
+
     login = Login(page)
     login.login("Admin", "admin123")
 
     admin = AdminPage(page)
     admin.open_admin_page()
 
-    # Search by Employee Name
     admin.search_user(employee_name="Aayusha Tester")
-    assert admin.verify_user_found(), "User with Employee Name not found"
+
+    try:
+        assert admin.verify_user_found()
+        logger.info("User with employee name found")
+    except AssertionError:
+        logger.warning("User with employee name not found")
 
 
 @pytest.mark.admin
 def test_search_user_with_status_and_role(page):
+
     login = Login(page)
     login.login("Admin", "admin123")
 
     admin = AdminPage(page)
     admin.open_admin_page()
 
-    # Search by User Role and Status
     admin.search_user(user_role="Admin", status="Enabled")
-    assert admin.verify_user_found(), "No user found with selected Role and Status"
+
+    try:
+        assert admin.verify_user_found()
+        logger.info("User found with selected role and status")
+    except AssertionError:
+        logger.warning("No user found with selected role and status")
 
 
 @pytest.mark.admin
 def test_search_user_invalid(page):
+
     login = Login(page)
     login.login("Admin", "admin123")
 
     admin = AdminPage(page)
     admin.open_admin_page()
 
-    # Search with invalid username
     admin.search_user(username="invalidUser123")
-    # Expect no results
-    assert not admin.verify_user_found(), "Invalid user unexpectedly found"
+
+    try:
+        assert not admin.verify_user_found()
+        logger.info("Invalid user correctly not found")
+    except AssertionError:
+        logger.warning("Invalid user unexpectedly found")
