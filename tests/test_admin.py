@@ -78,6 +78,8 @@
 #         logger.info("Invalid user correctly not found")
 #     except AssertionError:
 #         logger.warning("Invalid user unexpectedly found")
+# tests/test_admin.py
+
 import pytest
 import logging
 from pages.login import Login
@@ -86,27 +88,22 @@ from pages.admin import AdminPage
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-
 @pytest.mark.admin
 def test_open_job_titles(page):
-
+    # Login
     login = Login(page)
     login.login("Admin", "admin123")
     logger.info("Logged in successfully")
 
+    # Navigate to Admin → Job → Job Titles
     admin = AdminPage(page)
-
-    # Click Admin menu
     admin.open_admin_page()
     logger.info("Admin page opened")
 
-    # Click Job → Job Titles
     admin.open_job_titles()
     logger.info("Navigated to Job Titles page")
 
-    # Verification (URL contains jobTitle)
-    try:
-        assert "jobTitle" in page.url
-        logger.info("Successfully opened Job Titles page")
-    except AssertionError:
-        logger.warning("Failed to open Job Titles page")
+    # Verify Job Titles page loaded
+    admin.job_titles.wait_for(state="visible", timeout=5000)
+    assert "viewJobTitleList" in page.url
+    logger.info("Successfully opened Job Titles page")
