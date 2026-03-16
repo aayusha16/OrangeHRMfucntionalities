@@ -135,3 +135,25 @@
 2026-03-16 07:22:06,145 - INFO - Logged in successfully
 2026-03-16 07:22:43,122 - INFO - Screenshot taken: screenshots/test_add_employee.png
 2026-03-16 07:22:43,126 - INFO - Closing browser
+2026-03-16 07:35:17,980 - INFO - Opening OrangeHRM login page
+2026-03-16 07:35:27,153 - INFO - Logged in successfully
+2026-03-16 07:35:31,426 - INFO - Admin page opened
+2026-03-16 07:35:33,198 - INFO - Navigated to Job Titles page
+2026-03-16 07:35:33,446 - INFO - Successfully opened Job Titles page
+2026-03-16 07:35:33,447 - INFO - Closing browser
+2026-03-16 07:36:04,657 - INFO - Opening OrangeHRM login page
+2026-03-16 07:36:10,806 - INFO - Closing browser
+2026-03-16 07:36:14,113 - INFO - Opening OrangeHRM login page
+2026-03-16 07:36:20,005 - INFO - Closing browser
+2026-03-16 07:36:21,650 - INFO - Opening OrangeHRM login page
+2026-03-16 07:36:27,542 - INFO - Closing browser
+2026-03-16 07:36:29,210 - INFO - Opening OrangeHRM login page
+2026-03-16 07:36:43,394 - INFO - Closing browser
+2026-03-16 07:37:15,724 - INFO - Opening OrangeHRM login page
+2026-03-16 07:37:22,146 - INFO - Closing browser
+2026-03-16 07:37:24,144 - INFO - Opening OrangeHRM login page
+2026-03-16 07:37:30,306 - INFO - Closing browser
+2026-03-16 07:37:31,848 - INFO - Opening OrangeHRM login page
+2026-03-16 07:37:37,464 - INFO - Closing browser
+2026-03-16 07:37:38,798 - INFO - Opening OrangeHRM login page
+2026-03-16 07:37:44,409 - INFO - Closing browser

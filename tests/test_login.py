@@ -1,57 +1,20 @@
-# from pages.login import Login
-
-
-# def test_valid_login(page):
-#     login = Login(page)
-    
-#     login.login("Admin", "admin123")
-#     assert "dashboard" in page.url #un and pw  as a parameter to test pass and fail
-
-
-# def test_invalid_password(page):
-#     login = Login(page)
-#     logger.info("Testing invalid password")
-#     login.login("Admin", "admin1234")
-#     assert "dashboard" not in page.url
-
-
-# def test_invalid_username(page):
-#     login = Login(page)
-#     logger.info("Testing invalid username")
-#     login.login("Admin1", "admin123")
-#     assert "dashboard" not in page.url
-
-
-# def test_invalid_credentials(page):
-#     login = Login(page)
-#     login.login("ADMIN", "ADMIN123")
-#     assert "dashboard" not in page.url
-
-
-# def test_blank_login(page):
-#     login = Login(page)
-#     login.login("", "")
-#     assert "dashboard" not in page.url
-
-
-# def test_blank_password(page):
-#     login = Login(page)
-#     login.login("Admin", "")
-#     assert "dashboard" not in page.url
-
-
-# def test_blank_username(page):
-#     login = Login(page)
-#     login.login("", "admin123")
-#     assert "dashboard" not in page.url
 import pytest
+import logging
 from pages.login import Login
+from data.login_data import get_login_data
 
-@pytest.mark.login
-def test_valid_login(page):
+logger = logging.getLogger(__name__)
+
+
+@pytest.mark.parametrize("username,password,expected", get_login_data())
+def test_login(page, username, password, expected):
+
+    logger.info(f"Testing login with {username}")
+
     login = Login(page)
+    login.login(username, password)
 
-    login.login("Admin", "admin123")
-
-    # Verify successful login
-    assert "dashboard" in page.url
+    if expected:
+        assert "dashboard" in page.url
+    else:
+        assert "dashboard" not in page.url
